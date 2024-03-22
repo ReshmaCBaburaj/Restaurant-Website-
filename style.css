@@ -1,0 +1,390 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.html{
+    transition: smooth 5s; 
+}
+.main{
+    width: 100%;
+    position: relative;
+    /* background-color: black; */
+}
+.main .wrapper{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+.main .wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./Media/rest.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(30%);
+    /* border-radius: 20px; */
+    z-index: -1;
+}
+.main .wrapper .nav{
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    
+   /* background-color: gray; */
+  
+}
+
+#logo{
+    width: 15%;
+}
+
+.listitem{
+    display: inline-block;
+   margin: 10px 20px;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+   
+    
+}
+.listitem a{
+    color: white;
+    
+    text-decoration: none;
+}
+.main .wrapper .desc {
+    position: absolute;
+    top: 50%; /* Position the div at 50% from the top */
+    left: 50%; /* Position the div at 50% from the left */
+    transform: translate(-50%, -50%); /* Center the div both horizontally and vertically */
+    text-align: center; /* Center the text */
+}
+.main .wrapper .desc h1 {
+
+    color: rgb(167, 167, 97); /* Set the color to white */
+    font-size: 35px;
+    
+  
+}
+.main .wrapper .desc h3 {
+
+    color: bisque; /* Set the color to white */
+    padding-top: 10px;
+    font-size: 15px;
+  
+}
+.main #About{
+    background-color: rgb(145, 143, 75);
+    height: 60vh;
+    width: 100%;
+    
+    /* border-radius: 30px; */
+    /* position: absolute; */
+    
+    text-align: center; /* Center the text */
+}
+#About h2{
+    padding: 20px 30px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+
+}
+.grid p{
+    text-align: justify;
+    padding-left: 30px;
+    width: 90%; /* Set width to ensure paragraph stays within its column */
+    max-width: 100%; /* Set maximum width to prevent paragraph from overflowing */
+    word-wrap: break-word; /* Ensure long words are broken and wrap within the container */
+   
+    
+}
+.grid img{
+    /* height: 300px;
+    width: 500px; */
+    max-width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    /* padding: 10px 20px;
+    border-radius: 10%; */
+}
+#MENU{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: burlywood;
+}
+.main #MENU_Section {
+    position: relative; /* Ensure the position is relative for the pseudo-element */
+    z-index: 2; /* Set z-index for the actual menu content */
+}
+
+.main #MENU_Section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./Media/menu.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(30%);
+    z-index: 1; 
+    /* Ensure the pseudo-element stays behind the actual menu content */
+}
+
+
+.main #MENU_Section h1{
+    color: white;
+    position: absolute;
+    top:5%;
+    left:40%;
+    transform: translate(-5%, -50%);
+    text-align: center;
+    /* padding: 10px; */
+    z-index: 1;
+
+
+}
+#MENU img {
+    width: 200px;
+    height: 300px;
+    border-radius: 20%;
+    transition: all 1s ease;
+    object-fit: cover;
+    z-index: 1;
+    padding: 80px 10px;
+
+}
+
+#MENU img:hover {
+    transform: perspective(800px) rotateY(25deg); /* Corrected rotation syntax */
+    opacity: 1;
+}
+
+#MENU:hover img:not(:hover) {
+    opacity: 0.4;
+}
+#ADD_TO_CART  .CART{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+/* #MENU{
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    
+   
+}
+#MENU img{
+    width: 200px;
+    transform: perspective(800px) rotateY('25deg');
+    border-radius: 1rem;
+    transition: all 1s ease;
+    object-fit: cover;
+}
+#MENU:hover img{
+    opacity: 0.4;
+}
+#MENU img:hover{
+    transform: none;
+    opacity: 1;
+} */
+.main .foodhead{
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+}
+#FOOD_MENU{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    /* border: 1px solid red; */
+    margin: 30px;
+}
+#FOOD_MENU .fooditem{
+    border: 1px solid brown;
+    
+}
+#FOOD_MENU .fooditem:hover{
+    background-color: pink;
+    color: black;
+    
+}
+#FOOD_MENU .fooditem h2,h3{
+    color:brown;
+    font-weight: bold;
+
+}
+#FOOD_MENU .fooditem{
+    width:250px;
+    height: 330px;
+    text-align: center;
+    
+}
+#FOOD_MENU .fooditem img{
+    width: 250px;
+    height: 200px;
+
+}
+#FOOD_MENU .fooditem button{
+    border:1px solid brown;
+    background-color: brown;
+    
+    padding: 10px 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#FOOD_MENU .fooditem button a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+#FOOD_MENU .fooditem button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#FOOD_MENU .fooditem button a:hover{
+    color: white;
+}
+.main .bottompart {
+    position: relative; /* Ensure the position is relative for the pseudo-element */
+    z-index: 2; /* Set z-index for the actual bottom part content */
+}
+
+
+.main .bottompart:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./Media/menu.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(30%);
+    z-index: 1; 
+    /* Ensure the pseudo-element stays behind the actual menu content */
+}
+
+
+.main .bottompart .heading{
+    position: absolute;
+    left:45%;
+    top:10%;
+    transform: translate(-10%,-45%);
+    color: white;
+    z-index: 1;
+    margin-top: 10px;
+    
+}
+
+.contact-section{
+    display: flex;
+    align-items: center;/* for putting all child elements vertically center */
+    justify-content: center;
+    /* for putting all child elements horizontaly center */
+    margin-top: 20px;
+    /* z-index: 1; */
+    
+}
+.contact-icon{
+    width: 60px;
+    height: 50px;
+    color: white;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-top: 50px;
+    z-index: 1;
+}
+.contact-icon a{
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+  
+}
+.contact-icon:hover{
+    background-image: linear-gradient(to top left,rgb(139, 29, 29),yellow);
+    
+}
+.contact-icon:hover i{
+    color: white;
+    animation: shake 0.75s;
+}
+@keyframes  shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+
+    }
+    30%{
+        transform: rotate(15deg);
+
+    }
+    40%{
+        transform: rotate(-15deg);
+
+    }
+}
+.lastpart p{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    z-index: 1;
+    color: white;
+
+}
+/* .lasticon i{
+    font-size: 30px;
+
+    color: black;
+}
+.lasticon{
+    float: right; */
+    /* border: 1px solid red;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-image: linear-gradient(to top left,rgb(187, 79, 7),yellow);
+    margin: 30px 20px 60px 0px;
+
+}
+.lasticon :hover i{
+    color: white;
+} */
+html{
+    scroll-behavior: smooth;
+}
